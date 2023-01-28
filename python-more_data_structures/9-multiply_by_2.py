@@ -4,4 +4,3 @@ def multiply_by_2(a_dictionary):
     for x in newDictionary:
         newDictionary[x] *= 2
     return newDictionary
-
