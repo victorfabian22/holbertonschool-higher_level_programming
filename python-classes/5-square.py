@@ -1,40 +1,42 @@
 #!/usr/bin/python3
-"""Class Square definition"""
+# 5-square.py
+# Alex Nuñez <5694@holbertonstudents.com>
+"""Define a class Square."""
 
 
 class Square:
-    """Class Square that defines a square:
-        - Private instance attribute: size
-        - Instantiation with optional size: def __init__(self, size=0)"""
+    """Represents a square."""
     def __init__(self, size=0):
-        """Size is a private attribute :
-            - size must be an integer, otherwise raise a TypeError exception
-              with the message size must be an integer
-            - if size is less than 0, raise a ValueError exception with the
-              message size must be >= 0"""
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
-        else:
-            self.__size = size
+        """Initialize a Square.
+        Args:
+                size(int): The size of the new square.
+        """
+        self.size = size
 
     @property
     def size(self):
-        """size Property"""
-        return (self.__size)
+        """Get/set the current size of the square."""
+        return(self.__size)
 
     @size.setter
-    def size(self, size):
-        """setter for size"""
-        if not isinstance(size, int):
+    def size(self, value):
+        self.__size = value
+
+        if not isinstance(value, (int)):
             raise TypeError("size must be an integer")
-        elif size < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
-        else:
-            self.__size = size
 
     def area(self):
-        """Public instance method:
-           Return: the current square area"""
-        return(self.__size * self.__si)
+        """Calculate the area."""
+        return(self.__size * self.__size)
+
+    def my_print(self):
+        """Printing a square."""
+
+        for i in range(0, self.__size):
+            [print("#", end="") for j in range(self.__size)]
+            print("")
+
+        if self.size == 0:
+            print("")
