@@ -1,0 +1,43 @@
+Write a function that prints a text with 2 new lines after each of these characters: ., ? and :
+
+Prototype: def text_indentation(text):
+text must be a string, otherwise raise a TypeError exception with the message text must be a string
+There should be no space at the beginning or at the end of each printed line
+You are not allowed to import any module
+
+====================
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+>>> text_indentation(3)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/mnt/c/Users/5060/Desktop/holbertonschool-higher_level_programming/python-test_driven_development/5-text_indentation.py", line 8, in text_indentation
+    raise TypeError("text must be a string")
+TypeError: text must be a string
+>>> text = str
+>>> text_indentation(text)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/mnt/c/Users/5060/Desktop/holbertonschool-higher_level_programming/python-test_driven_development/5-text_indentation.py", line 7, in text_indentation
+    raise TypeError("text must be a string")
+TypeError: text must be a string
+>>> text_indentation("")
+>>> text = ""
+>>> text_indentation(text)
+>>> text = "la puta         madreeee"
+>>> text_indentation(text)
+la puta         madreeee
+>>> text = "la puta    \n     madreeee"
+>>> text_indentation(text)
+la puta    
+     madreeee
+>>> text_indentation("tomato     .   ,,,,/\?00")
+tomato     .
+<BLANKLINE>
+,,,,/\?
+<BLANKLINE>
+00
