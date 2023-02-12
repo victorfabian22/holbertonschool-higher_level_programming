@@ -40,4 +40,3 @@ def pascal_triangle(n):
     Return the Pascal's triangle
     """
     return triangle
-
