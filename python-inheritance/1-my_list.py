@@ -1,12 +1,19 @@
 #!/usr/bin/python3
-"""class MyList that inherits from list
+"""
+Task 1
+Class MyList inherits from list.
+this class will inherit all the methods or attributes that the
+built-in class "list" has.
 """
 
 
 class MyList(list):
-    """inherits from list"""
+    """
+    extends or inherits from "list" class
+    """
+
     def print_sorted(self):
-        """prints the list, but sorted
-        (ascending sort)
+        """
+        Prints a list of ints sorted and in ascending order
         """
         print(sorted(self))
